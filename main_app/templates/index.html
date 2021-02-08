@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css"  />
+</head>
+<body>
+    <h1> Wacky Widgets</h1>
+    <h3><p> No Widgets Exist</p></h3>
+
+    {% if widget_list|length == 0 %}
+
+{% else %}
+
+{% endif %}
+
+<hr>
+
+    <h4> Add a Widget </h4>
+   
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        <input type="submit" value="description" class="btn">
+
+          {{ form.as_table }}
+        </table>
+        <input type="submit" value="Add Widget">
+      </form>
